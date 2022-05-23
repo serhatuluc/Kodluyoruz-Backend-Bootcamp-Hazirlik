@@ -22,7 +22,7 @@ public class Student {
     }
 
 
-    public void addBulkExamNote(int mat, int fizik, int kimya) {
+    public void addBulkExamNote(int mat, int fizik, int kimya, int matCA, int fizikCA, int kimyaCA) {
 
         if (mat >= 0 && mat <= 100) {
             this.mat.note = mat;
@@ -34,6 +34,20 @@ public class Student {
 
         if (kimya >= 0 && kimya <= 100) {
             this.kimya.note = kimya;
+        }
+
+
+
+        if (matCA >= 0 && matCA <= 100) {
+            this.mat.classActivity = matCA;
+        }
+
+        if (fizikCA >= 0 && fizikCA <= 100) {
+            this.fizik.classActivity = fizikCA;
+        }
+
+        if (kimyaCA >= 0 && kimyaCA <= 100) {
+            this.kimya.classActivity = kimyaCA;
         }
 
     }
@@ -54,7 +68,7 @@ public class Student {
     }
 
     public void calcAvarage() {
-        this.avarage = (this.fizik.note + this.kimya.note + this.mat.note) / 3;
+        this.avarage = ((this.fizik.note*0.8+this.fizik.classActivity*0.2) + (this.kimya.note*0.7 + 0.3*this.kimya.classActivity)  + (this.mat.note * 0.9 +0.1*this.mat.classActivity)) / 3;
     }
 
     public boolean isCheckPass() {
