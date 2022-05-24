@@ -32,7 +32,6 @@ public class Employee {
             return 0;
         }
     }
-
     public double raiseSalary(){
         double raiseRate;
         int year = 2021 - this.hireYear;
@@ -50,7 +49,7 @@ public class Employee {
     }
 
     public void toStr(){
-        System.out.println("Adı : " + this.name);
+        System.out.println("Adı hey: " + this.name);
         System.out.println("Maaşı : " + this.salary);
         System.out.println("Çalışma Saati : " + this.workHours);
         System.out.println("Başlangıç Yılı : " + this.hireYear);
